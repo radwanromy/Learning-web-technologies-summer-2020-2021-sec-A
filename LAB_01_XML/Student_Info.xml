@@ -1,17 +1,17 @@
-<emp_basic_info>
-	<emp>
+<std_basic_info>
+	<std>
 		<sl_no>23</sl_no>
 		<name>John Carter</name>
 		<addmission_date>25/12/2015</addmission_date>
-	</emp>
-	<emp>
+	</std>
+	<std>
 		<sl_no>29</sl_no>
 		<name>Bob Marsha</name>
 		<addmission_date>13/01/1999</addmission_date>
-	</emp>
-	<emp>
+	</std>
+	<std>
 		<sl_no>35</sl_no>
 		<name>Clark Kent</name>
 		<addmission_date>17/06/2005</addmission_date>
-	</emp>
-</emp_basic_info>
+	</std>
+</std_basic_info>
