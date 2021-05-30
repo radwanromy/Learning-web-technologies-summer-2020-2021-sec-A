@@ -9,15 +9,15 @@
 	<emp>
 		<id>2</id>
 		<name>Mark Zuckerberg</name>
-		<address>H# 38, R#3, Banani, Dhaka</address>
-		<department>Sales</department>
-		<salary>$20000</salary>
+		<address>Flat# A/1, H# 20, R#18, Mirpur, Dhaka</address>
+		<department>Accounts</department>
+		<salary>$12000</salary>
 	</emp>
 	<emp>
 		<id>3</id>
 		<name>Ala Voski</name>
-		<address>H# 38, R#3, Banani, Dhaka</address>
-		<department>Sales</department>
-		<salary>$20000</salary>
+		<address>H# 38, R#3, Motijheel</address>
+		<department>Human Resource</department>
+		<salary>$30000</salary>
 	</emp>
 </emp_full_info>
