@@ -60,7 +60,7 @@ function lprint($ln)
                 echo $lf; $lf++;
             }
         echo "<br>";
-       $lf='A';
+
        }
 }
 $ln =3;
