@@ -22,7 +22,6 @@
 </head>
 <body>
 	<form method="REQUEST" action="email.php">
-
 		<fieldset><legend>Email</legend> <input type="email" name="email" value="" /><br>
 				<input type="submit" name="submit" value="Submit"></fieldset>
 	</form>
