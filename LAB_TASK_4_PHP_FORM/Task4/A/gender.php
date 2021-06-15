@@ -2,7 +2,7 @@
 	
 	if(isset($_REQUEST['submit'])){
 		
-		$dob = $_REQUEST['gender'];
+		$dob = $_REQUEST['Degree'];
 
 		if($dob == ""){
 			echo "invalid email!";

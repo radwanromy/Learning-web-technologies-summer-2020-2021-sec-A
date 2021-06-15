@@ -1,8 +1,8 @@
 <?php
 	
-	if(isset($_GET['submit'])){
+	if(isset($_REQUEST['submit'])){
 		
-		$gender = $_GET['gender'];
+		$gender = $_REQUEST['Degree'];
 
 		if($gender == ""){
 			echo "invalid !";
@@ -21,12 +21,13 @@
 	<title>Form Data</title>
 </head>
 <body>
-		<form method="GET">
-		<fieldset> <legend>Gender</legend><br>
-       <input type="radio" name="gender" value="" placeholder=""> Male
-       <input type="radio" name="gender" value="" placeholder=""> Female
-       <input type="radio" name="gender" value="" placeholder=""> Other <br>
-   </fieldset>  <input type="submit" name="" value="Submit" placeholder="">
+		<form method="REQUEST">
+	   <fieldset> <legend> Degree</legend><br>
+       <input type="checkbox" name="Degree" value=""> SSC 
+						<input type="checkbox" name="Degree" value="">HSC
+						<input type="checkbox" name="Degree" value=""> BSc
+       
+   </fieldset> <input type="submit" name="" value="Submit" placeholder="">
 	</form>
 </body>
 </html>
