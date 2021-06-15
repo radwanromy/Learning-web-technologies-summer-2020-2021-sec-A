@@ -4,7 +4,7 @@
 		
 		$email = $_REQUEST['email'];
 
-		if($username == ""){
+		if($email == ""){
 			echo "invalid email!";
 		}else{
 			echo $email;
