@@ -11,10 +11,11 @@
 		$day        = $_POST['day'];
 		$month      = $_POST['month'];
 		$year       = $_POST['year'];
+        $picture    = $_POST['picture'];
         
 		if($name != '' && $uname != '' && $password != '' && $email != '' && $gender !='' && $day != '' && $month != '' && $year != ''  )
         {
-            $user =['name'=>$name, 'email'=>$email , 'uname'=> $uname , 'password'=>$password ,  'gender'=>$gender , 'day'=>$day , 'month'=>$month, 'year'=>$year ];
+            $user =['name'=>$name, 'email'=>$email , 'uname'=> $uname , 'password'=>$password , 'picture'=>$picture, 'gender'=>$gender , 'day'=>$day , 'month'=>$month, 'year'=>$year ];
 			$_SESSION['user'] = $user;
 			header('location: Login.html');
 		}else{
