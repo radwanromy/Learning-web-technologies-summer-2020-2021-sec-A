@@ -12,7 +12,7 @@
         {
 			if($_SESSION['user']['uname'] == $uname && $_SESSION['user']['password'] == $password){
 					$_SESSION['flag'] = 'true';
-					header('location: Dashboard.html');
+					header('location: Dashboard.php');
 			}else{
 				echo 'invlaid username/password';
 			}
