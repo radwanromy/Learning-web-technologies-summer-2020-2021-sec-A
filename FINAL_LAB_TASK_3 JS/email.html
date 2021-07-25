@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Example</title>
+	<style>
+
+	</style>
+</head>
+<body>
+ Email:<input id= 'email' type="email" name="email" value="">
+		<button title="hint: sample@example.com" style="color: blue; font-size: 14px;"><b>i</b></button>
+		<br><br>
+		<button onclick="getEmail()">Submit</button>
+		<h1 id=head1></h1>
+	<script>
+		"use strict"
+        function getEmail(){
+			let email = document.getElementById('email').value;
+			
+			if(email  != ""){
+				document.getElementById('head1').innerHTML = email;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+</body>
+</html>
