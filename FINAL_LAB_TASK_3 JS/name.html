@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Example</title>
+	<style>
+
+	</style>
+</head>
+<body>
+
+	<h2 >Name</h2>
+	
+	<input id="name" type="text" name="name" value="" onkeyup="getNames()" /><br><br>
+	<button onclick="getNames()">Submit</button>
+	<h2 id="head1"> </h2>
+	<script>
+		"use strict"
+        function getName()
+        {
+			let name = document.getElementById('name').value;
+			if(name = ''){
+				alert('Null value');
+			}
+            else if(name.length<2 && (name>='A' && name<='Z' || name>='a' && name<='z')){
+                    alert('Contains at least two words');
+                    }
+            else if(name >='0'  && name<='9' || name=='~' || name=='!' || name=='@' || name =='#' || name=='$' || name=='%' || name=='^' || name=='&' || name=='*' || name=='()'|| name=='/' ){
+                    alert('Can contain a-zor A-Zor dot(.) or dash(-)');
+                    }
+            else if(name>='0' && name<='9'){
+                    alert('Must be starts with letter');
+                    }
+                    
+            else{
+				document.getElementById('head1').innerHTML = name;
+			}
+		}
+	</script>
+</body>
+</html>
