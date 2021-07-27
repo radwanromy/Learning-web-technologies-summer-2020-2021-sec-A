@@ -95,6 +95,23 @@
 	            </td>
             </tr> 
             <tr>
+	            <td>
+	              <b>Profile Picture</b>
+	            </td>
+	            <td>
+	            <input type="file" name="myPicture" value="">
+	            </td>
+	            <td>
+	               
+	            </td>
+            </tr> 
+            <tr>
+                <td colspan="3" align="right">
+                   
+                   <br>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="3" align="right">
                      <input type="submit" name="submit" value="Submit">
                      <input type="reset" name="reset" value="Reset">
@@ -114,6 +131,9 @@
 			let year = document.getElementById('year').value;
             let bloodGroup = document.getElementById('bloodGroup').value;
             let gender = document.myForm.gender.value;
+            let degree = document.myForm.degree.value;
+            let pp = document.forms["myForm"]["myPicture"].value;
+            
             //Name Validation
 			 if(name == ''){
 				alert('Name: Null value');
@@ -136,24 +156,33 @@
             //Gender Validation
            if(gender == ""){
                  alert("Gender: At least one of them has to be selected");
-                    return false;
-			} 
+                   // return false;
+			}  
             //Date of Birth Validation
             if(day == "" || month == "" || year == ""){
 				alert("Date of Birth: Cannot be empty");
-				return false;
+				//return false;
 			}
 			if((day > 0 && day <= 31) || (month >= 1 && month <= 12) 
 			|| (year >= 1900 && year <= 2016)){
 				alert("Date of Birth: Must be a valid number (dd: 0-31, mm: 1-12, yyyy: 1900-2016)");
-				return false;
+				//return false;
 			} 
             //Blood Group Validation
             if(bloodGroup == ""){
-                alert("Please select at least one of the options.");
+                alert("Blood Group: Please select at least one of the options.");
+				//return false;
+			} 
+            //Degree Validation
+            if(degree == ""){
+				alert("Degree: Please select at least one of the options.");
+				//return false;
+			} 
+            //Profile Picture Validation
+            if(pp == ""){
+				alert("Profile Picture: Please, select a picture.");
 				return false;
 			}
-            //Degree Validation
 		}
 	</script>
 </body>
