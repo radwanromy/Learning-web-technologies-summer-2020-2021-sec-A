@@ -1,66 +1,48 @@
 <?php
-	$title="Edit Users";
-	include 'header.php';
-	$id = $_GET['id'];
-	$users = $_SESSION['users'];
-	$user = '';
+	require_once('session_header.php');
+	require_once('subDb.php');
 
-	foreach ($users as $u) {
-		if($u['id'] == $id){
-			$user = $u;
-			break;
-		}
+	if (isset($_GET['id'])) {
+		$user = getByID($_GET['id']);	
+	}else{
+		header('all_users.php');
 	}
 
-
 ?>
 
-	<h1>Edit user</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+</head>
+<body>
 
-	<nav>
-		<a href="home.php">Back</a> |
-		<a href="../controller/logout.php">logout</a>
-	</nav>
-	
-	<br>
-	<div>
-		<form method="post" action="../controller/userController.php">
-			<fieldset>
-				<table>
-					<tr>
-						<td>Id</td>
-						<td><?=$user['id']?></td>
-					</tr>
-					<tr>
-						<td>Name</td>
-						<td><input type="text" name="name" value="<?=$user['name']?>"></td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td><input type="email" name="email" value="<?=$user['email']?>"></td>
-					</tr>
-					<tr>
-						<td>Dept</td>
-						<td>
-							<select name="dept">
-								<option <?php if($user['dept'] == 'CSE'){echo "selected";}?> value="CSE">CSE</option>
-								<option <?php if($user['dept'] == 'SE'){echo "selected";}?> value="SE">SE</option>
-								<option <?php if($user['dept'] == 'CS'){echo "selected";}?> value="CS">CS</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type="submit" name="update" value="Update"></td>
-					</tr>
-				</table>
-			</fieldset>
-		</form>
-	</div>
-
-	<br>
-	<br>
-
-<?php
-	include 'footer.php';
-?>
+	<form action="userController.php" method="post">
+		<fieldset>
+			<legend>Edit User</legend>
+			<table>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username" value="<?=$user['username']?>"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" value="<?=$user['password']?>"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" value="<?=$user['email']?>"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="hidden" name="id" value="<?=$user['id']?>">
+						<input type="submit" name="edit" value="Update"> 
+						<a href="all_users.php">Back</a>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
