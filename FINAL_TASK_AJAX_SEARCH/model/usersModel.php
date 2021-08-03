@@ -39,7 +39,7 @@
 
 
 
-	function updateProduct($id){
+	function updateUser($id){
 		$conn = getConnection();
 		$sql = "update users set name='{$user['name']}', email='{$user['email']}', password='{$user['password']}' where id={$user['id']}";
 		
@@ -50,7 +50,7 @@
 		}
 	}
 
-	function deleteProduct($id){
+	function deleteUser($id){
 		$conn = getConnection();
 		$sql = "delete from users where id={$id}";
 		
