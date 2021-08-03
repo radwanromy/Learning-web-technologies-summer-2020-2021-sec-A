@@ -39,9 +39,9 @@
 
 
 
-	function updateProduct($product){
+	function updateProduct($id){
 		$conn = getConnection();
-		$sql = "update product set name='{$product['name']}', buying_price='{$product['buying_price']}', selling_price='{$product['selling_price']}' where name={$product['name']}";
+		$sql = "update users set name='{$user['name']}', email='{$user['email']}', password='{$user['password']}' where id={$user['id']}";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;
@@ -50,9 +50,9 @@
 		}
 	}
 
-	function deleteProduct($name){
+	function deleteProduct($id){
 		$conn = getConnection();
-		$sql = "delete from product where name={$name}";
+		$sql = "delete from users where id={$id}";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;
