@@ -8,7 +8,7 @@ session_start();
 <head>
 
 
- <script type="text/javascript" src="../JS/script.js">  </script>
+ <script type="text/javascript" src="../JS/cursor.js">  </script>
 	<body>
 	</body>
 
@@ -26,10 +26,7 @@ session_start();
 ?>
 
 <body>
-
-Search <input type="text"  name="name"  id='name' placeholder="Search Here" onkeypress="ajax()"/>
 	<div id="main_content">
-	
 	
 		
 			<legend>Display Employee Information</legend>
@@ -69,17 +66,24 @@ Search <input type="text"  name="name"  id='name' placeholder="Search Here" onke
 					<td><?=$emps[$i]['cno']?></td>
 					<td><?=$emps[$i]['uname']?></td>
 					<td><input type="button" name="roomNo" value="<?=$emps[$i]['pass'] ?>" hidden > hidden</td>
-					<td>
-					<form method="GET" action="../view/editemp.php">
-                           <input type="button" name="uname" value="<?= $emps[$i]['uname']?>" hidden >
-				        <input  type="submit" name="sub" value="Edit Room"  style="color:#00ccff;"  placeholder="" >
-						</form>
-						<form  action="../controller/deleteEmp.php" method="GET">
-                           <input type="text" name="uname" value="<?= $emps[$i]['uname']?>" hidden >
-				        <input  type="submit" name="not" value="Delete Room" style="color:#00ccff;" >
-						</form>
-					</td>
+
 				</tr>
+				<form action="../Controller/editEmp.php" method="post"  >
+                <tr align="center">
+				<td ><input type="text" style="color: #00ccff" name="eid" value="<?=$emps[$i]['eid']?>" /></td>
+					<td ><input type="text" style="color: #00ccff"  name="ename" value="<?=$emps[$i]['ename']?>" /></td>
+					<td><input type="text" style="color: #00ccff"  name="cname" value="<?=$emps[$i]['cname']?>" /></td>
+					<td><input type="text" style="color: #00ccff"  name="cno" value="<?=$emps[$i]['cno']?>" /></td>
+					<td><input type="text"  style="color: #00ccff" name="uname" value="<?=$emps[$i]['uname']?>" /></td>
+				    <td><input type="text"  style="color: #00ccff" name="pass" value="<?=$emps[$i]['pass'] ?>" /></td>
+					<td>
+				
+                           
+				        <input  type="submit"  style="color: #00ccff"  name="UP" value="Save Edit " placeholder="" >
+                    </td>
+
+				</form>
+       
 
 				<?php } ?>
 			</table>
